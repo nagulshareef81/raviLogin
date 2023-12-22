@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     tools {
-        maven "maven3"
+        maven "maven"
     }
     parameters {
          string(name: 'tomcat_stag', defaultValue: '34.228.220.67', description: 'Node1-Remote Staging Server')
