@@ -28,7 +28,7 @@ stages{
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        sh "scp **/*.war jenkins@${params.tomcat_stage}:/usr/share/apache-tomcat-9.0.84/webapps/"
+                        sh "scp -i C:\Users\saiki\Desktop\main.pem **/target/*.war jenkins@${params.tomcat_stage}:/usr/share/apache-tomcat-9.0.84/webapps/"
                     }
                 }
                 stage ("Deploy to Production"){
